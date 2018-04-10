@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+    </head>
+    <body>
+        <% include navbaradmin.ejs%>
+        <hr>
+        <h1>Product Detail<h1>
+
+        <hr>
+
+                <% data.forEach (x=>{ %>
+                    <p> Product : <%= x.Product_Name %><p> 
+                    <p> Price :<%= x.Price %></p>
+                <% }) %>
+        <hr>
+
+        <table>
+            <tr>
+                <th>Color</th>
+                <th>Size</th>
+                <th>Stock</th>
+            </tr>
+
+                <% data2.forEach (x=>{ %>
+                    <tr>
+                        <td><%= x.Color_Name %></td>
+                        <td><%= x.Size %></td>
+                        <td><%= x.Stock %></td>
+                    </tr>
+                <% }) %>
+        </table>
+    
+        <br><br>
+
+        <% data.forEach (x=> { %>
+
+        <a href="/admininsertcolorandsize/<%= x.Id_Product %>">Insert to Cart</a>
+        <% }) %>
+    </body>
+</html>

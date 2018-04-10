@@ -1,0 +1,23 @@
+<html>
+<head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+</head>
+
+<body>
+Welcome, <% username %>&nbsp;&nbsp;&nbsp;<a href="/logout">Logout</a>
+
+<form method="post" action="/admininsertcategory">
+
+Category : <input type="text" name="category" placeholder="Category" required><br>
+<% data.forEach(x =>{ %>
+Season ID : <input type="text" name="seasonid" value="<%= x.Id_Season %>" required><br>
+<% }) %>
+
+<input type="Submit" value="Submit">
+</form>
+</html>

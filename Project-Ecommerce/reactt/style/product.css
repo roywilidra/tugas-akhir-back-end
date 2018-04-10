@@ -1,0 +1,56 @@
+/*.image{
+    width:250px;
+    height:220px;
+    border: 1px black solid;
+
+}
+.details{
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;  
+}
+.details>li{
+    list-style-type: none;
+    font-family: 'Slabo 27px', serif;
+}
+.display{
+    margin:90px auto;
+    background-color: rgb(227, 233, 207);
+    color:rgb(38, 56, 24);
+    text-align: center;
+    padding:30px;
+    font-family: 'Abril Fatface', cursive;
+
+}
+*/
+
+display {
+    font-family: 'open sans';
+    overflow-x: hidden; }
+  
+  img {
+    max-width: 100%; }
+
+.productbox {
+    background-color:#ffffff;
+	padding:10px;
+	margin:20px;
+	-webkit-box-shadow: 0 8px 6px -6px  #999;
+	   -moz-box-shadow: 0 8px 6px -6px  #999;
+	        box-shadow: 0 8px 6px -6px #999;
+}
+
+.producttitle {
+    font-weight:bold;
+	padding:5px 0 5px 0;
+}
+
+.productprice {
+	border-top:1px solid #dadada;
+	padding-top:5px;
+}
+
+.pricetext {
+	font-weight:bold;
+	font-size:1.4em;
+}

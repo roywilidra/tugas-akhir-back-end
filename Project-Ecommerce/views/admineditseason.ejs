@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+
+    </head>
+
+    <body>
+            <% include navbaradmin.ejs %>
+        <form method="post" action="/updateseason/<%= Id_Season %>">
+            Season : <input type="text" name="Season_Name" placeholder="Season"><br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

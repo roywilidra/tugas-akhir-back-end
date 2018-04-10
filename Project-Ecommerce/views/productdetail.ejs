@@ -1,0 +1,51 @@
+<html>
+<head>
+
+    <style>
+        body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+        h1{text-transform: uppercase;}
+        li{list-style: none}
+        a{text-decoration: none}
+    </style>
+    <% include navbar.ejs %>
+
+    <hr>
+
+    <h3>Product Detail</h3>
+    
+    <hr>
+</head?
+<body>
+    <% data.forEach(x => { %>
+    <h4>Product : <%= x.Product_Name %></p>
+    <h4>Price: Rp. <%= x.Price %></h4>
+
+    <% }) %>
+        <table>
+            <tr>
+                <td>Color</td>
+                <td>Size</td>
+                <td>Stock</td>
+            </tr>
+
+    <form method= "POST" action="/cart" >
+
+            <% data.forEach(x => { %>
+            <tr>
+            <td><%= x.Color %></td>
+            <td><%= x.Size %></td>
+            <td><%= x.Stock %></td>
+            <td><% if(username==""){%><a href="/login">Cart</a>}
+                <% else { %><input type="submit" name="<%= x.Stock %>" value="Cart">
+                <% } %>
+                </td>
+
+            </tr>
+                <% }) %>
+            </form>
+        </table>
+</body>
+</html>
+
+
+

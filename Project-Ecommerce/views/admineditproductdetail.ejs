@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+    </head>
+    <body>
+            <% include navbaradmin.ejs %>
+            <br>
+            <h3>Edit Color, Size and Stock</h3>
+            <br>
+            <% data.forEach(x=> { %>
+        <form method="post" action="/admineditproductdetail/<%= x.Id_Color %>/<%= x.Id_Size %>">
+            Id_Product : <input type="text" name="Id_Product" value="<%= x.Id_Product %>" readonly><br>
+            Color_Name : <input type="text" name="Color_Name" value="<%= x.Color_Name %>" required><br>
+            Id_ProductColor : <input type="text" name="Id_ProductColor" value="<%= x.Id_ProductColor %>" readonly><br>
+            Size : <input type="text" name="Size" value="<%= x.Size %>" required><br>
+            Stock : <input type="number" name="Stock" value="<%= x.Stock %>" required><br>
+            <input type="Submit" value="Submit">
+        </form>
+        <% }) %>
+    </body>
+</html> 

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+    </head>
+    <body>
+            <% include navbaradmin.ejs %>
+            <br>
+            <h3>Edit Product</h3>
+            <br>
+            <% data.forEach (x=>{ %>
+        <form method="post" action="/admineditproduct/<%= x.Id_Product %>">
+            Product : <input type="text" name="product" value="<%= x.Product %>" required ><br>
+            Price : <input type="number" name="price" value="<%= x.Price %>" required ><br>
+            Id_Category : <input type="number" name="Id_Category" value="<%= x.Id_Category %>" required ><br>
+            <input type="submit" value="submit">
+        </form>
+        <% }) %>
+    </body>
+</html> 

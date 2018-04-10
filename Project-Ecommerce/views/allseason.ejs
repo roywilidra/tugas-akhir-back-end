@@ -1,0 +1,21 @@
+<html>
+    <head>
+            <title>Category per Season</title>
+            <style>
+                body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+                h1{text-transform: uppercase;}
+                li{list-style: none}
+                a{text-decoration: none}
+            </style>
+    </head>
+    <body>
+        <% include navabar.ejs %>
+        <br>
+        <% data2.forEach (x=> { %>
+            <h1><%= x.Season %> Category</h1>
+        <% }) %>
+        <% data.forEach(x => { %>
+            <li><a href="/Product/<%= x.Id_Category %>"><%= x.Category %></a><li>
+        <% }) %>
+    </body>
+</html>

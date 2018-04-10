@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+    </head>
+    <body>
+            <% include navbaradmin.ejs %>
+            <hr>
+            <% data.forEach (x=> { %>
+            <h3>Insert New Color, Size and Stock into <%= x.Product %></h3>
+            <% }) %>
+            
+        <form method="post" action="/admininsertcolorandsize">
+            <% data.forEach (x => { %>
+            Id_Product : <input type="text" name="Id_Product" value="<%= x.Id_Product %>" readonly><br>
+            <% }) %>
+
+            Color : <select><% data2.forEach(x => { %><option><%= x.Color_Name %> <%= x.Id_ProductColor %></option>
+                <!--<input type="text" name="Color" value="<%= x.Color_Name %>" required>-->
+
+            </option>
+
+            <% }) %>
+            <input type="text" name="Color" required>
+
+            </select> <br>
+            Id_Color : <select><% data3.forEach(x => { %><option><%= x.Color_Name %> <%= x.Id_ProductColor %></option>
+            <% }) %>
+            <input type="text" name="Id_Color" required><br>
+            </select>
+            Size : <input type="text" name="Size" required><br>
+            Stock : <input type="number" name="Stock" required><br>
+                    <input type="Submit" value="Submit">
+        </form>
+    </body>
+</html> 

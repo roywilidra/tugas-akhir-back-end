@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+    </head>
+    <body>
+            <% include navbaradmin.ejs %>
+            <br>
+        <form method="post" action="/updatecategory/<%= Id_Category %>">
+            Category : <input type="text" name="Category_Name" placeholder="Category"><br>
+            <br>
+            ID Season : <input type="text" name="Id_Season" placeholder="ID Season"><br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html> 

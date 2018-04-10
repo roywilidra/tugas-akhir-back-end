@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+    </head>
+    <body>
+        <p><h1>User Login</h1></p>
+        <form method="post" action="/login">
+            Username : <input type="text" name="Username" placeholder="Username"><br>
+            <br>
+            Password : <input type="password" name="Password" placeholder="Password"><br>
+            <font style="color:red"><%= notif %></font><br>
+            <input type="Submit" value="Submit">
+        </form>
+        <a href="/formregister">Register</a>
+    </body>
+</html>

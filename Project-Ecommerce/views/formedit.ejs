@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>
+    </head>
+    <body>
+            <% include navbaradmin.ejs %>
+        <form method="post" action="/editdata/<%= id %>">
+            Name : <input type="text" name="Name" value="" placeholder="Name">
+            <br>
+            <input type="Submit" value="Submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+            <title>Home</title>
+            <style>
+                body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+                h1{text-transform: uppercase;}
+                li{list-style: none}
+                a{text-decoration: none}
+            </style>
+    </head>
+    <body>
+        <% include navbar.ejs %>
+        <br>
+        <h1>Season</h1>
+            <% data.forEach (x=>{ %>
+                <li><a href="category/<%= x.id %>"><%= x.Season_Name %></a></li>
+            <% }) %>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; padding:40px;}
+            h1{text-transform: uppercase;}
+            li{list-style: none}
+            a{text-decoration: none}
+        </style>    
+    </head>
+    <body>
+    <% include navbaradmin.ejs%>
+    <h1>Category<h1>
+    <% data2.forEach (x=>{ %>
+        <h1><%= x.Season_Name %> Category</h1>
+    <% }) %>    
+
+    <% data.forEach (x=>{ %>
+
+        <table>
+            <tr>
+                <td><h4><a href="/adminproduct/<%= x.Id_Category%>"> <%=x.Category_Name%></a></h4></td>
+            </tr>
+        </table>
+    <% }) %>
+    </body>
+</html>
